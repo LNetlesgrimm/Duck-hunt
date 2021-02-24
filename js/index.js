@@ -1,5 +1,5 @@
-let posTop = 0;
-let posLeft = 0;
+let posTop = 10;
+let posLeft = 10;
 
 // Keyboard event
 const playerKeyboard = document.querySelector("#cube");
@@ -12,9 +12,9 @@ function moveCube(event) {
   const aLeft = key == "ArrowLeft";
   const aRight = key == "ArrowRight";
   //conditions
-  switch (key) {
+  /*switch (key) {
     case aDown:
-      posTop++;
+      posTop = posTop + 10;
       playerKeyboard.style.top = posTop + "%";
       break;
     case aUp:
@@ -31,7 +31,35 @@ function moveCube(event) {
       break;
     default:
       break;
+  }*/
+  if (aDown) {
+    posTop = posTop + 10;
   }
+  if (posTop > 90) {
+    posTop = 0;
+  }
+  playerKeyboard.style.top = posTop + "%";
+  if (aUp) {
+    posTop = posTop - 10;
+  }
+  if (posTop < 0) {
+    posTop = 0;
+  }
+  playerKeyboard.style.top = posTop + "%";
+  if (aRight) {
+    posLeft = posLeft + 10;
+  }
+  if (posLeft > 90) {
+    posLeft = 0;
+  }
+  playerKeyboard.style.left = posLeft + "%";
+  if (aLeft) {
+    posLeft = posLeft - 10;
+  }
+  if (posLeft < 0) {
+    posLeft = 0;
+  }
+  playerKeyboard.style.left = posLeft + "%";
 }
 // Mouse event
 playerKeyboard.addEventListener("click", touched);
