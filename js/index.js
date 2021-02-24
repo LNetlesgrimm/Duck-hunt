@@ -96,7 +96,7 @@ function clickGo() {
 }
 function touched(event) {
   //chanch the status od
-  alert("You Win!"); //debugger
+  alert("Mouse Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
   //stop the event listener of the mouse and keyboard
   stop();
