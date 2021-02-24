@@ -34,3 +34,31 @@ h1 {
   width: 100px;
   height: 100px;
 }
+.sectPlayer{
+  background-color: rgb(182, 179, 179);
+  margin: auto;
+  width: 600px;
+  border-radius: 10px;
+  padding: 20px;
+
+ 
+
+}
+#players{
+  display: flex;
+  margin: auto;
+  justify-content: center;
+  align-items: center;
+  
+}
+.formBiginPlay{
+ margin: 20px;  
+}
+ #player1 ,#player2{
+   height: 30px;
+ }
+ #go{
+   padding: 10px 50px;
+   background-color: green;
+   color: #fff;
+ }
