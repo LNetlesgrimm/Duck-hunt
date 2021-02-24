@@ -34,38 +34,55 @@ h1 {
   width: 100px;
   height: 100px;
 }
-.sectPlayer{
+.sectPlayer {
   background-color: rgb(182, 179, 179);
-  margin: auto;
+  margin: 10px auto 20px;
   width: 600px;
   border-radius: 10px;
   padding: 20px;
-
- 
-
 }
-#players{
+#players {
   display: flex;
   margin: auto;
   justify-content: center;
   align-items: center;
-  
 }
-.formBiginPlay{
- margin: 20px;  
+.formBiginPlay {
+  margin: 20px;
 }
- #player1 ,#player2{
-   height: 30px;
- }
- #go{
-   padding: 10px 50px;
-   background-color: green;
-   color: #fff;
- }
+#player1,
+#player2 {
+  height: 30px;
+}
+#go {
+  padding: 10px 50px;
+  background-color: green;
+  color: #fff;
+}
 .counter {
   padding: 10px 20px;
   background-color: lightblue;
   width: 50px;
   margin: auto;
   border-radius: 20px;
+}
+#scorName {
+  display: flex;
+  justify-content: space-between;
+  transform: translateY(-100%);
+  padding: 10px;
+}
+.scorNameParticular {
+  background-color: #fff;
+  width: 150px;
+  text-align: left;
+  padding: 10px;
+  border-radius: 10px;
+}
+.scorNameParticular h3 {
+  border-bottom: solid 1px black;
+}
+.match {
+  display: flex;
+  align-items: flex-end;
 }
