@@ -8,7 +8,7 @@ function gettPlayerName(event) {
   event.preventDefault();
   const player1 = document.querySelector('#player1').value;
   const player2 = document.querySelector('#player2').value;
-  console.log(player1);
+
 
 }
 
