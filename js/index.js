@@ -7,6 +7,7 @@ playerData.addEventListener("submit", gettPlayerName);
 
 function gettPlayerName(event) {
   event.preventDefault();
+
   playerName();
   timer();
   cubeGo();
@@ -19,6 +20,10 @@ function gettPlayerName(event) {
 function playerName() {
   const player1 = document.querySelector("#player1").value;
   const player2 = document.querySelector("#player2").value;
+  const formGet = document.querySelector('.sectPlayer');
+  const gameTitele = document.querySelector('#game');
+  formGet.style.display = "none";
+  gameTitele.style.backgroundColor = 'red';
 
 
   const name1 = document.querySelector("#p1");
@@ -30,6 +35,8 @@ function playerName() {
 
   name1.innerText = player1;
   name2.innerText = player2;
+
+
 }
 
 // Keyboard event
