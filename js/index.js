@@ -1,6 +1,24 @@
 let posTop = 10;
 let posLeft = 10;
 
+const playerData = document.querySelector("#formPlayer");
+playerData.addEventListener('submit', gettPlayerName);
+
+function gettPlayerName(event) {
+  event.preventDefault();
+  const player1 = document.querySelector('#player1').value;
+  const player2 = document.querySelector('#player2').value;
+  console.log(player1);
+
+}
+
+
+
+
+
+
+
+
 // Keyboard event
 const playerKeyboard = document.querySelector("#cube");
 document.addEventListener("keydown", moveCube);
@@ -45,11 +63,11 @@ function moveCube(event) {
 
 // Mouse event
 playerKeyboard.addEventListener("click", touched);
-
 function touched(event) {
   //chanch the status od
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
+  //stop the event listenet of the mouse and keyboard
   stop();
   clearInterval(interval);
 }
@@ -59,6 +77,9 @@ function stop() {
   document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
 }
+/**name on the field
+ *
+ */
 //TIMER
 
 let number = 10;
