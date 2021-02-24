@@ -34,6 +34,7 @@ function playerName() {
 
 // Keyboard event
 const playerKeyboard = document.querySelector("#cube");
+// function name to put in the GO submit
 function cubeGo() {
   document.addEventListener("keydown", moveCube);
 }
@@ -74,7 +75,7 @@ function moveCube(event) {
   }
   playerKeyboard.style.left = posLeft + "%";
 }
-//stop the event listener of the mouse and keyboard
+//stop the event listener of the mouse and keyboard + clear timer
 function stop() {
   document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
@@ -83,13 +84,14 @@ function stop() {
 
 // Mouse event
 function clickGo() {
+  //function name to put in the GO submit
   playerKeyboard.addEventListener("click", touched);
 }
 function touched(event) {
   //chanch the status od
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
-  //stop the event listenet of the mouse and keyboard
+  //stop the event listener of the mouse and keyboard
   stop();
 }
 
