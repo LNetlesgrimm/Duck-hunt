@@ -7,23 +7,29 @@ playerData.addEventListener("submit", gettPlayerName);
 
 function gettPlayerName(event) {
   event.preventDefault();
+  playerName();
+  timer();
+  cubeGo();
+  clickGo();
+
+}
+
+
+
+function playerName() {
   const player1 = document.querySelector("#player1").value;
   const player2 = document.querySelector("#player2").value;
 
 
   const name1 = document.querySelector("#p1");
-  const sc1 = document.querySelector("#sc1");
+  const sc1 = document.querySelector("#sc1");//keyboardPlayer
 
 
   const name2 = document.querySelector("#p2");
-  const sc2 = document.querySelector("#sc2");
+  const sc2 = document.querySelector("#sc2");//mousPlayer
 
   name1.innerText = player1;
   name2.innerText = player2;
-  timer();
-  cubeGo();
-  clickGo();
-
 }
 
 // Keyboard event
