@@ -62,9 +62,9 @@ h1 {
 .counter {
   padding: 10px 20px;
   background-color: lightblue;
-  width: 50px;
+  width: 80px;
   margin: auto;
-  border-radius: 20px;
+  border-radius: 10px;
 }
 #scorName {
   display: flex;
