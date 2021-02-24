@@ -60,6 +60,12 @@ function moveCube(event) {
   }
   playerKeyboard.style.left = posLeft + "%";
 }
+}
+//stop the event listener of the mouse and keyboard
+function stop() {
+  document.removeEventListener("keydown", moveCube);
+  playerKeyboard.removeEventListener("click", touched);
+}
 
 // Mouse event
 playerKeyboard.addEventListener("click", touched);
