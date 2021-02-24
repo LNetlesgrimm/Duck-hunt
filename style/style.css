@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 h1 {
-  margin: 20px;
+  margin: 30px;
 }
 #cube {
   width: 10%;
@@ -34,6 +34,7 @@ h1 {
   width: 100px;
   height: 100px;
 }
+<<<<<<< HEAD
 .sectPlayer{
   background-color: rgb(182, 179, 179);
   margin: auto;
@@ -62,3 +63,12 @@ h1 {
    background-color: green;
    color: #fff;
  }
+=======
+.counter {
+  padding: 10px 20px;
+  background-color: lightblue;
+  width: 50px;
+  margin: auto;
+  border-radius: 20px;
+}
+>>>>>>> 95ce5591d92c247cfceca8af9e99913e05493d5b

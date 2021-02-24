@@ -68,10 +68,29 @@ function touched(event) {
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
   //stop the event listenet of the mouse and keyboard
+  stop();
+  clearInterval(interval);
+}
+
+//stop the event listener of the mouse and keyboard
+function stop() {
   document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
-
 }
 /**name on the field
  *
  */
+//TIMER
+
+let number = 10;
+const interval = setInterval(() => {
+  document.querySelector(".counter").textContent = number;
+  number--;
+  console.log(number);
+  if (number == -1) {
+    clearInterval(interval);
+    playerKeyboard.style.backgroundColor = "green";
+    stop();
+    alert("The keyboard user won!");
+  }
+}, 1000);
