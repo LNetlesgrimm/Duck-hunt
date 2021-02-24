@@ -50,7 +50,9 @@ function touched(event) {
   //chanch the status od
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
+
   //stop the event listenet of the mouse and keyboard
+  document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
-  playerKeyboard.removeEventListener("keydown", moveCube);
+
 }
