@@ -17,7 +17,7 @@ body {
   position: relative;
 }
 h1 {
-  margin: 20px;
+  margin: 30px;
 }
 #cube {
   width: 10%;
@@ -33,4 +33,11 @@ h1 {
   border-radius: 20px;
   width: 100px;
   height: 100px;
+}
+.counter {
+  padding: 10px 20px;
+  background-color: lightblue;
+  width: 50px;
+  margin: auto;
+  border-radius: 20px;
 }
