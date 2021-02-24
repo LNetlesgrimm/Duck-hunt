@@ -50,7 +50,6 @@ function touched(event) {
   //chanch the status od
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
-<<<<<<< HEAD
   stop();
   clearInterval(interval);
 }
@@ -59,13 +58,6 @@ function touched(event) {
 function stop() {
   document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
-=======
-
-  //stop the event listenet of the mouse and keyboard
-  document.removeEventListener("keydown", moveCube);
-  playerKeyboard.removeEventListener("click", touched);
-
->>>>>>> 4d8b60e6e92365914ee0b1ae06c259e63db9e06f
 }
 //TIMER
 
