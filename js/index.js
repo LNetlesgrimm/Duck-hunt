@@ -7,26 +7,41 @@ playerData.addEventListener("submit", gettPlayerName);
 
 function gettPlayerName(event) {
   event.preventDefault();
+
+  playerName();
   timer();
   cubeGo();
   clickGo();
-  const player1 = document.querySelector("#player1").value;
-  const player2 = document.querySelector("#player2").value;
-  console.log(player1);
-  const player1 = document.querySelector("#player1").value;
-  const name1 = document.querySelector("#p1");
-  const sc1 = document.querySelector("#sc1");
 
+}
+
+
+
+function playerName() {
+  const player1 = document.querySelector("#player1").value;
   const player2 = document.querySelector("#player2").value;
+  const formGet = document.querySelector('.sectPlayer');
+  const gameTitele = document.querySelector('#game');
+  formGet.style.display = "none";
+  gameTitele.style.backgroundColor = 'red';
+
+
+  const name1 = document.querySelector("#p1");
+  const sc1 = document.querySelector("#sc1");//keyboardPlayer
+
+
   const name2 = document.querySelector("#p2");
-  const sc2 = document.querySelector("#sc2");
+  const sc2 = document.querySelector("#sc2");//mousPlayer
 
   name1.innerText = player1;
   name2.innerText = player2;
+
+
 }
 
 // Keyboard event
 const playerKeyboard = document.querySelector("#cube");
+// function name to put in the GO submit
 function cubeGo() {
   document.addEventListener("keydown", moveCube);
 }
@@ -67,7 +82,7 @@ function moveCube(event) {
   }
   playerKeyboard.style.left = posLeft + "%";
 }
-//stop the event listener of the mouse and keyboard
+//stop the event listener of the mouse and keyboard + clear timer
 function stop() {
   document.removeEventListener("keydown", moveCube);
   playerKeyboard.removeEventListener("click", touched);
@@ -76,13 +91,14 @@ function stop() {
 
 // Mouse event
 function clickGo() {
+  //function name to put in the GO submit
   playerKeyboard.addEventListener("click", touched);
 }
 function touched(event) {
   //chanch the status od
   alert("You Win!"); //debugger
   playerKeyboard.classList.add("cube_shuted");
-  //stop the event listenet of the mouse and keyboard
+  //stop the event listener of the mouse and keyboard
   stop();
 }
 
